@@ -1,6 +1,7 @@
 const express = require('express')
 const userRoute = require('./router/user.route.js')
 const companyRoute = require('./router/company.route.js')
+const jobRoute = require('./router/job.route.js')
 require('dotenv').config()
 require('./db')
 const cookieParser = require('cookie-parser')
@@ -19,6 +20,7 @@ app.use(cors())
 
 app.use('/api/v1/user', userRoute)
 app.use('/api/v1/company', companyRoute)
+app.use('/api/v1/job', jobRoute)
 
 app.listen(process.env.PORT, () => {
     console.log('Server is running on port 3000')

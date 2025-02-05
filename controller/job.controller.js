@@ -5,7 +5,7 @@ const postJob = async (req, res) => {
         const { title, description, requirements, salary, location, jobType, experience, position, companyId } = req.body
         const userId = req.id
 
-        if (!title || !description || !requirements || !salary || !location || !jobType || !experience || !position || companyId) {
+        if (!title || !description || !requirements || !salary || !location || !jobType || !experience || !position || !companyId) {
             return res.status(400).json({
                 message: "Please fill in all the required fields.",
                 success: false
@@ -37,14 +37,16 @@ const postJob = async (req, res) => {
 
 const getAllJobs = async (req, res) => {
     try {
-        const keyword = req.query || '';
+        const keyword = req.query.keyword || '';
         const query = {
             $or: [
                 { title: { $regex: keyword, $options: "i" } },
                 { description: { $regex: keyword, $options: "i" } }
             ]
         }
-        const jobs = await Job.find(query)
+        const jobs = await Job.find(query).populate({
+            path: 'company',
+        }).sort({ createdAt: -1 })
 
         if (!jobs) {
             return res.status(404).json({
