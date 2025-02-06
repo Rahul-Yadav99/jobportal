@@ -57,13 +57,13 @@ const getAppliedJob = async (req, res) => {
 
         if (!application) {
             return res.status(404).json({
-                message: "No job applied",
+                message: "No job applied.",
                 success: false
             })
         }
         return res.status(200).json({
             application,
-            message: "Jobs applied successfully",
+            message: "Jobs applied successfully.",
             success: true,
         })
     } catch (error) {
