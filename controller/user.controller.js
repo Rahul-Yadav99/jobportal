@@ -1,7 +1,6 @@
 const User = require("../model/user.model");
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-const cookie = require('cookie-parser')
 
 const register = async (req, res) => {
     try {
@@ -123,27 +122,27 @@ const updateProfile = async (req, res) => {
         const file = req.file
 
         let skillsArray;
-        if(skills){
-           skillsArray = skills.split(",");
+        if (skills) {
+            skillsArray = skills.split(",");
         }
-        
+
         const userId = req.id //middleware authentication
 
         let user = await User.findById(userId)
 
         if (!user) {
-            return res.status(500).json({
+            return res.status(400).json({
                 message: 'User not found.',
                 success: false
             })
         }
         // updating data
-        if(fullname) user.fullname = fullname
-        if(email) user.email = email
-        if(phoneNumber) user.phoneNumber = phoneNumber
-        if(bio) user.profile.bio = bio
-        if(skills) user.profile.skills = skillsArray
-        
+        if (fullname) user.fullname = fullname
+        if (email) user.email = email
+        if (phoneNumber) user.phoneNumber = phoneNumber
+        if (bio) user.profile.bio = bio
+        if (skills) user.profile.skills = skillsArray
+
         await user.save()
 
         user = {
