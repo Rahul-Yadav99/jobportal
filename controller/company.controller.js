@@ -6,7 +6,7 @@ const registerCompany = async (req, res) => {
         if (!companyName) {
             return res.status(400).json({
                 message: "Company name is required.",
-                status: false
+                success: false
             })
         }
 
@@ -15,7 +15,7 @@ const registerCompany = async (req, res) => {
         if (company) {
             return res.status(400).json({
                 message: "Company already exists.",
-                status: false
+                success: false
             })
         }
 
@@ -26,7 +26,7 @@ const registerCompany = async (req, res) => {
         return res.status(200).json({
             message: "Company created successfully.",
             company,
-            status: true,
+            success: true,
         })
     } catch (error) {
         console.log(error);
@@ -41,14 +41,14 @@ const getCompany = async (req, res) => {
         if (!company) {
             return res.status(404).json({
                 message: "Company not found.",
-                status: false
+                success: false
             })
         }
 
         return res.status(200).json({
             message: "Company found.",
             company,
-            status: true
+            success: true
         })
     } catch (error) {
         console.log(error)
@@ -63,14 +63,14 @@ const getCompanyById = async (req, res) => {
         if (!company) {
             return res.status(404).json({
                 message: "Company not found.",
-                status: false
+                success: false
             })
         }
 
         return res.status(200).json({
             message: "Company found.",
             company,
-            status: true
+            success: true
         })
     } catch (error) {
         console.log(error)
@@ -88,14 +88,14 @@ const updateCompany = async (req, res) => {
         if (!company) {
             return res.status(404).json({
                 message: "Company not found.",
-                status: false
+                success: false
             })
         }
 
         return res.status(200).json({
             message: "Company updated.",
             // company,
-            status: true
+            success: true
         })
     } catch (error) {
         console.log(error)
