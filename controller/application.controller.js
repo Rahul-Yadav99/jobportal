@@ -128,8 +128,4 @@ const updateStatus = async (req, res) => {
     }
 }
 
-const deleteUser = async (req, res) => {
-    console.log('sdfsdf')
-}
-
-module.exports = { applyJobs, getAppliedJob, getApplicants, updateStatus, deleteUser }
+module.exports = { applyJobs, getAppliedJob, getApplicants, updateStatus }
