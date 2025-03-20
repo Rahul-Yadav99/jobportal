@@ -35,4 +35,4 @@ app.use('/api/v1/application', applicationRoute)
 //     console.log('Server is running on port 3000')
 // })
 
-app.listen('https://jobportal-two-coral.vercel.app')
+app.listen('https://jobportal-lsmii0t0s-rahuls-projects-a29ec861.vercel.app/')
