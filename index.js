@@ -12,7 +12,7 @@ const app = express()
 
 //middleware
 const corsOptions = {
-    origin:'http://localhost:5173',
+    origin:'https://jobportal-frontend-seven.vercel.app/',
     credentials:true
 }
 
