@@ -5,9 +5,9 @@ const { applyJobs, getAppliedJob, getApplicants, updateStatus } = require('../co
 
 const router = express.Router()
 
-router.route('/apply/:id').get(isAuthenticated, applyJobs)
-router.route('/get').get(isAuthenticated, getAppliedJob)
-router.route('/:id/applicants').get(isAuthenticated, getApplicants)
-router.route('/status/:id/update').post(isAuthenticated, updateStatus)
+router.route('/apply/:id').get(applyJobs)
+router.route('/get').get(getAppliedJob)
+router.route('/:id/applicants').get(getApplicants)
+router.route('/status/:id/update').post(updateStatus)
 
 module.exports = router
