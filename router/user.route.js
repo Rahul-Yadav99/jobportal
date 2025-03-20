@@ -1,6 +1,6 @@
 const express = require('express')
 const { register, login, updateProfile, logout } = require('../controller/user.controller');
-const isAuthenticated = require('../middleware/isAuthenticated');
+const isAuthenticated = require('../middleware/isAuthenticated.js');
 const singleUpload = require('../middleware/multer.js')
 
 const router = express.Router()

@@ -1,5 +1,5 @@
 const express = require('express')
-const isAuthenticated = require('../middleware/isAuthenticated');
+const isAuthenticated = require('../middleware/isAuthenticated.js');
 const { applyJobs, getAppliedJob, getApplicants, updateStatus } = require('../controller/application.controller.js');
 
 

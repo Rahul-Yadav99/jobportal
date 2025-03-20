@@ -1,5 +1,5 @@
 const express = require('express')
-const isAuthenticated = require('../middleware/isAuthenticated');
+const isAuthenticated = require('../middleware/isAuthenticated.js');
 const { registerCompany, getCompany, getCompanyById, updateCompany } = require('../controller/company.controller');
 
 const router = express.Router()

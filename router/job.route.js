@@ -1,5 +1,5 @@
 const express = require('express')
-const isAuthenticated = require('../middleware/isAuthenticated');
+const isAuthenticated = require('../middleware/isAuthenticated.js');
 const { postJob, getAllJobs, getAdminJobs, getJobById } = require('../controller/job.controller');
 
 const router = express.Router()
