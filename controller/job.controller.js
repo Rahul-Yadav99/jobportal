@@ -31,7 +31,7 @@ const postJob = async (req, res) => {
             success: true,
         })
     } catch (error) {
-        console.log(error)
+        // console.log(error)
     }
 }
 
@@ -61,7 +61,7 @@ const getAllJobs = async (req, res) => {
             success: true
         })
     } catch (error) {
-        console.log(error)
+        // console.log(error)
     }
 }
 
@@ -83,7 +83,7 @@ const getJobById = async (req, res) => {
             success: true
         })
     } catch (error) {
-        console.log(error)
+        // console.log(error)
     }
 }
 
@@ -106,7 +106,7 @@ const getAdminJobs = async (req, res) => {
             success: true
         })
     } catch (error) {
-        console.log(error)
+        // console.log(error)
     }
 }
 

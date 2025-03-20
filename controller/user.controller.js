@@ -39,7 +39,7 @@ const register = async (req, res) => {
             success: true
         })
     } catch (error) {
-        console.log(error)
+        // console.log(error)
     }
 }
 
@@ -103,7 +103,7 @@ const login = async (req, res) => {
         })
 
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 }
 
@@ -114,7 +114,7 @@ const logout = async (req, res) => {
             success: true
         })
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 }
 
@@ -170,7 +170,7 @@ const updateProfile = async (req, res) => {
         })
 
     } catch (error) {
-        console.log(error)
+        // console.log(error)
     }
 }
 

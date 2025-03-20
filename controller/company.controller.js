@@ -29,7 +29,7 @@ const registerCompany = async (req, res) => {
             success: true,
         })
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 }
 
@@ -51,7 +51,7 @@ const getCompany = async (req, res) => {
             success: true
         })
     } catch (error) {
-        console.log(error)
+        // console.log(error)
     }
 }
 
@@ -73,7 +73,7 @@ const getCompanyById = async (req, res) => {
             success: true
         })
     } catch (error) {
-        console.log(error)
+        // console.log(error)
     }
 }
 
@@ -98,7 +98,7 @@ const updateCompany = async (req, res) => {
             success: true
         })
     } catch (error) {
-        console.log(error)
+        // console.log(error)
     }
 }
 

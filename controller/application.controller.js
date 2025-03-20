@@ -39,7 +39,7 @@ const applyJobs = async (req, res) => {
             success: true
         })
     } catch (error) {
-        console.log(error)
+        // console.log(error)
     }
 }
 
@@ -67,7 +67,7 @@ const getAppliedJob = async (req, res) => {
             success: true,
         })
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 }
 
@@ -92,7 +92,7 @@ const getApplicants = async (req, res) => {
             success: true
         });
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 }
 
@@ -124,7 +124,7 @@ const updateStatus = async (req, res) => {
         })
 
     } catch (error) {
-        console.log(error)
+        // console.log(error)
     }
 }
 
