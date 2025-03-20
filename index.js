@@ -12,8 +12,8 @@ const app = express()
 
 //middleware
 const corsOptions = {
-    origin:'https://jobportal-frontend-seven.vercel.app/',
-    credentials:true
+    origin: 'https://jobportal-frontend-seven.vercel.app/',
+    credentials: true
 }
 
 app.use(express.json())
