@@ -4,9 +4,9 @@ const { registerCompany, getCompany, getCompanyById, updateCompany } = require('
 
 const router = express.Router()
 
-router.route('/register').post(registerCompany);
-router.route('/get').get(getCompany);
-router.route('/get/:id').get(getCompanyById);
-router.route('/update/:id').put(updateCompany);
+router.route('/register').post(isAuthenticated, registerCompany);
+router.route('/get').get(isAuthenticated, getCompany);
+router.route('/get/:id').get(isAuthenticated, getCompanyById);
+router.route('/update/:id').put(isAuthenticated, updateCompany);
 
 module.exports = router
