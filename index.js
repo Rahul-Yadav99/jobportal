@@ -1,9 +1,9 @@
 const express = require('express')
-const cookieParser = require('cookie-parser')
 const userRoute = require('./router/user.route.js')
 const companyRoute = require('./router/company.route.js')
 const jobRoute = require('./router/job.route.js')
 const applicationRoute = require('./router/application.route.js')
+const cookieParser = require('cookie-parser')
 require('dotenv').config()
 require('./db')
 const cors = require('cors')
@@ -11,18 +11,18 @@ const cors = require('cors')
 const app = express()
 
 //middleware
-
+const corsOptions = {
+    // origin: 'http://localhost:5173',
+    origin: ['https://jobportal-frontend-seven.vercel.app'],
+    credentials: true
+}
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
 app.use(cors(corsOptions))
 
 
-const corsOptions = {
-    // origin: 'http://localhost:5173',
-    origin: ['https://jobportal-frontend-seven.vercel.app'],
-    credentials: true
-}
+
 
 
 
