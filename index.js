@@ -12,8 +12,8 @@ const app = express()
 
 //middleware
 const corsOptions = {
-    origin: 'http://localhost:5173',
-    // origin: ['https://jobportal-frontend-seven.vercel.app'],
+    // origin: 'http://localhost:5173',
+    origin: ['https://jobportal-frontend-seven.vercel.app'],
     credentials: true
 }
 app.use(express.json())
@@ -32,4 +32,4 @@ app.listen(3000, ()=>{
     console.log('Server is running on port 3000')
 })
 
-// app.listen('https://jobportal-two-coral.vercel.app')
+app.listen('https://jobportal-two-coral.vercel.app')
