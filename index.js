@@ -28,8 +28,8 @@ app.use('/api/v1/company', companyRoute)
 app.use('/api/v1/job', jobRoute)
 app.use('/api/v1/application', applicationRoute)
 
-app.listen(3000, ()=>{
-    console.log('Server is running on port 3000')
-})
+// app.listen(3000, ()=>{
+//     console.log('Server is running on port 3000')
+// })
 
 app.listen('https://jobportal-two-coral.vercel.app')
