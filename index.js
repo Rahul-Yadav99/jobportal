@@ -22,6 +22,7 @@ app.use(cookieParser())
 app.use(cors(corsOptions))
 
 // API's
+// API's
 
 app.use('/api/v1/user', userRoute)
 app.use('/api/v1/company', companyRoute)
